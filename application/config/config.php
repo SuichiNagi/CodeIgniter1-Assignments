@@ -23,7 +23,7 @@ defined('BASEPATH') OR exit('No direct script access allowed');
 | a PHP script and you can easily do that on your own.
 |
 */
-$config['base_url'] = 'http://courses/';
+$config['base_url'] = 'http://semi-restful:8080/'; // ''
 
 /*
 |--------------------------------------------------------------------------
@@ -186,7 +186,7 @@ $config['permitted_uri_chars'] = 'a-z 0-9~%.:_\-';
 |
 */
 $config['allow_get_array'] = TRUE;
-$config['enable_query_strings'] = FALSE;
+$config['enable_query_strings'] = FALSE;    // disable query strings by setting it to FALSE 
 $config['controller_trigger'] = 'c';
 $config['function_trigger'] = 'm';
 $config['directory_trigger'] = 'd';
@@ -314,7 +314,7 @@ $config['cache_query_string'] = FALSE;
 | https://codeigniter.com/user_guide/libraries/encryption.html
 |
 */
-$config['encryption_key'] = '(00|_3n(rYp+!0n_k3Y';
+$config['encryption_key'] = '(00|_3n(rYp+!0n_k3Y';  // give your CodeIgniter an encryption salt
 
 /*
 |--------------------------------------------------------------------------
@@ -369,7 +369,7 @@ $config['encryption_key'] = '(00|_3n(rYp+!0n_k3Y';
 */
 $config['sess_driver'] = 'files';
 $config['sess_cookie_name'] = 'ci_session';
-$config['sess_expiration'] = 0;
+$config['sess_expiration'] = 0;  // turn off session expiration during development
 $config['sess_save_path'] = NULL;
 $config['sess_match_ip'] = FALSE;
 $config['sess_time_to_update'] = 300;
@@ -441,7 +441,7 @@ $config['global_xss_filtering'] = TRUE;
 $config['csrf_protection'] = FALSE;
 $config['csrf_token_name'] = 'csrf_test_name';
 $config['csrf_cookie_name'] = 'csrf_cookie_name';
-$config['csrf_expire'] = 0;
+$config['csrf_expire'] = 7200;
 $config['csrf_regenerate'] = TRUE;
 $config['csrf_exclude_uris'] = array();
 
